@@ -6,6 +6,7 @@
 .dark-mode {  /* contenedor del modo oscuro/claro */
     border: 2px solid white;
     transition: background-image 0.5s ease-in-out, color 0.5s ease-in-out; 
+    width: 65px;
 }
 
 .fondo-oscuro { /* fondo para modo oscuro */
@@ -32,4 +33,8 @@
 
 .icono { /* centrado del simbolo */
     margin-bottom: 2px;
+}
+
+.simbolo-idioma{
+    font-size: 22px;
 }

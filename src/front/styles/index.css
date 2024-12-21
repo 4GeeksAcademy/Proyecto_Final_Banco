@@ -24,7 +24,20 @@ body {
     height: 500px;
 }
 
-.enlace:hover{
+.enlace-claro:hover{
     cursor: pointer;
+    text-shadow: 0 0 13px rgb(255, 255, 255);
+}
+
+.enlace-oscuro:hover{
+    cursor: pointer;
+    text-shadow: 0 0 13px rgb(0, 0, 0);
+}
+
+.borde-brillante{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.letra-brillante{
     text-shadow: 0 0 13px rgb(255, 255, 255);
 }
