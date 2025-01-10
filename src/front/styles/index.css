@@ -1,9 +1,19 @@
+h1,
+h2,
+h3,
+p,
+span {
+  transition: all 0.4s ease-in-out;
+}
+
+
 /* ajusta el footer para que siempre se localize abajo (las clases se ubican en el loyout.js) */
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Playfair Display', serif;
 }
 
 .app-container {
@@ -24,7 +34,7 @@ footer {
 }
 
 .color-principal {
-  background-color: #030a8c;
+  background-color: red;
   color: white;
   font-weight: 700;
 }

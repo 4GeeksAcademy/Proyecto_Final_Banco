@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      texto: "text-black",
+      texto: "text-dark",
       fondo: "bg-dark",
       borde: "border border-danger",
       borde_hover: "enlace-oscuro",
@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       CambiarModo: (estado) => {
         if (estado === true) {
           setStore({
-            texto: "text-black",
+            texto: "text-dark",
             fondo: "bg-light",
             borde: "border border-dark",
             borde_hover: "enlace-oscuro",
