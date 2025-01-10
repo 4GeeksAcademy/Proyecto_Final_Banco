@@ -1,0 +1,48 @@
+/*--------------- animacion linea blanca h6 ----------*/
+.animation {
+    transition: justify-content 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.animation h6 {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.animation h6::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2.5px;
+    background-color: rgb(110, 110, 110);
+    transition: width 0.3s ease;
+}
+
+.animation:hover h6 {
+    justify-content: center;
+}
+
+.animation:hover span {
+    transform: translateX(5%);
+}
+
+.animation:hover h6::after {
+    width: 100%;
+}
+
+.icono_redes:hover {
+    cursor: pointer;
+}
+
+.icono_redes {
+    margin: 0 3px;
+    font-size: 25px;
+}
+
+.icono_redes:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}

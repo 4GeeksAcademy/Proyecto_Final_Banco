@@ -6,8 +6,12 @@ export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="text-center mt-5">
-      <p>:)</p>
+    <div className="row">
+      <div className="col-12 text-center">
+        <h1 className={`hover text-danger fw-bold fs-1 ejemplo ${store.borde_hover}`}>
+          Home :) 🍕😉🙋‍♂️🫰💵
+        </h1>
+      </div>
     </div>
   );
 };
