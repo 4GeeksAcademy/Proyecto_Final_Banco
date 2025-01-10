@@ -4,9 +4,9 @@ import { Context } from "../../store/appContext";
 const SaldoUsuario = () => {
     const { store, actions } = useContext(Context);
     const [hidden, SetHidden] = useState(false);
-    const [userLoad, SetUserLoad] = useState("elemento");
+    const [userLoad, SetUserLoad] = useState("elemento-segundario");
     useEffect(() => {
-        SetUserLoad("elemento visible")
+        SetUserLoad("elemento-segundario visible")
     }, [])
 
 

@@ -10,6 +10,20 @@
     transform: translateY(0);
 }
 
+/* animacion tabla */
+.elemento-tabla {
+    opacity: 0.1;
+    transform: translateX(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.elemento-tabla.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* elemento segundario */
 .elemento-segundario {
     opacity: 0.1;
     transform: translateY(20px);

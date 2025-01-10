@@ -1,3 +1,16 @@
+/* Animacion para suavizar la transicion */
+.elemento-login {
+    opacity: 0.1;
+    transform: translatex(60px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.elemento-login.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* alinea todo el contenido al centro */
 .content {
     align-content: center;
