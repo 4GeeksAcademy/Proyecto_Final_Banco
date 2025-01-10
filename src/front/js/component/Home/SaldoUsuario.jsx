@@ -10,7 +10,7 @@ const SaldoUsuario = () => {
     }, [])
 
 
-    return (<div className={`container my-3 p-3 color-principal w-100 rounded-3 ${store.texto} ${store.borde} ${userLoad}`}>
+    return (<div className={`container my-3 p-3 color-principal w-100 rounded-3 ${store.borde} ${userLoad}`}>
         <div className="row">
             <div className="col-12">
                 <div className="row">

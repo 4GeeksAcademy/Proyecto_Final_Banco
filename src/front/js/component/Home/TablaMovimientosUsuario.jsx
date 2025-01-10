@@ -10,7 +10,7 @@ const TablaMovimientoUsuario = () => {
     }, [])
 
 
-    return (<div className={`container my-3 p-3 w-100 rounded-3 ${store.texto} ${userLoad}`}>
+    return (<div className={`container my-3 p-3 w-100 rounded-3 ${userLoad}`}>
         <div className="row">
             <div className="col-12 text-center fw-bold">
                 <h2>Movimientos</h2>

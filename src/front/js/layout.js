@@ -22,7 +22,7 @@ const Layout = () => {
 
   return (
     // app-container, content -> clases para que el footer siempre se encuentre debajo del todo
-    <div className={`app-container ${store.fondo}`}>
+    <div className={`app-container ${store.fondo} ${store.texto}`}>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />

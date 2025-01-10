@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       texto: "text-dark",
-      fondo: "bg-dark",
+      fondo: "fondo-modo-oscuro",
       borde: "border border-danger",
       borde_hover: "enlace-oscuro",
     },
@@ -11,7 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         if (estado === true) {
           setStore({
             texto: "text-dark",
-            fondo: "bg-light",
+            fondo: "fondo-modo-claro",
             borde: "border border-dark",
             borde_hover: "enlace-oscuro",
           });
@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         } else {
           setStore({
             texto: "text-white",
-            fondo: "bg-dark",
+            fondo: "fondo-modo-oscuro",
             borde: "border border-white",
             borde_hover: "enlace-claro",
           });

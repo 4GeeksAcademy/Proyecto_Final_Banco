@@ -29,7 +29,7 @@ export const Navbar = () => {
 	}, [btn])
 
 	return (
-		<div className={`${store.texto} `}> {/* modo oscuro y claro */}
+		<div> {/* modo oscuro y claro */}
 			<div className="modal fade" id="lenguajes" tabIndex="-1" aria-labelledby="label" aria-hidden="true">
 				{/* Modal selector de idiomas */}
 				<div className="modal-dialog">
@@ -93,7 +93,7 @@ export const Navbar = () => {
 			<nav >
 				<div className="row my-2 mx-0">
 					<div className="col-3 text-end d-flex justify-content-end">
-						<img src={logo_negro} className={`img-fluid img-oscuro ${store.fondo == "bg-dark" ? "d-block" : "d-none"}`} /><img src={logo_blanco} className={`img-fluid img-claro ${store.fondo == "bg-dark" ? "d-none" : "d-block"}`} />
+						<img src={logo_negro} className={`img-fluid img ${store.fondo == "fondo-modo-oscuro" ? "d-block" : "d-none"}`} /><img src={logo_blanco} className={`img-fluid img ${store.fondo == "fondo-modo-oscuro" ? "d-none" : "d-block"}`} />
 					</div>
 
 					<div className="col-2 text-start fs-3 fw-bold  px-0 align-content-center"><span>GeekBank</span></div>

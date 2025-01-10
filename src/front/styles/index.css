@@ -16,10 +16,20 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+
+
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.fondo-modo-claro {
+  background-color: #ffffff;
+}
+
+.fondo-modo-oscuro {
+  background-color: rgb(52 58 63) !important;
 }
 
 .content {

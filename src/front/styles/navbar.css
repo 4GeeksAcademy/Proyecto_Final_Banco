@@ -1,14 +1,8 @@
-.img-claro {
+.img {
   /* longitud del simbolo principal */
   width: 165px;
-  height: 100px;
+  height: 150px;
   margin-top: -10px;
-}
-
-.img-oscuro {
-  width: 165px;
-  height: 92px;
-  margin-top: -5px;
 }
 
 .dark-mode {
