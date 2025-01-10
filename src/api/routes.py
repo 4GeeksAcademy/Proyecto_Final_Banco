@@ -6,6 +6,8 @@ from api.models import db, User
 from api.utils import generate_sitemap, APIException
 from flask_cors import CORS
 from flask_jwt_extended import create_access_token
+import random, string
+from .utils import send_reset_email
 
 api = Blueprint('api', __name__)
 
@@ -92,5 +94,48 @@ def user_autentication():
     except Exception as e:
         return jsonify({"error": str(e)}), 400         
 
+@api.route('/User/ForgotPassword', methods=['POST'])
+def forgot_password():
+    data = request.get_json()
+    email = data.get("email")
+    if not email:
+        return jsonify({"Mensaje": "The email is missing"}), 400
+
+    user = User.query.filter_by(email=email).first()
+    if not user:
+        return jsonify({"Mensaje": "User not found"}), 404
+
+    # Generar un código de verificación
+    code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+
+    # Guardar el código en la base de datos o en caché
+    user.reset_code = code
+    db.session.commit()
+
+    # Enviar el correo
+    send_reset_email(user.email, code)
+
+    return jsonify({"Mensaje": "Verification code sent"}), 200
+
+@api.route('/User/ResetPassword', methods=['POST'])
+def reset_password():
+    data = request.get_json()
+    email = data.get("email")
+    code = data.get("code")
+    new_password = data.get("new_password")
+
+    if not email or not code or not new_password:
+        return jsonify({"Mensaje": "Missing data"}), 400
+
+    user = User.query.filter_by(email=email, reset_code=code).first()
+    if not user:
+        return jsonify({"Mensaje": "Invalid code or email"}), 400
+
+    # Actualizar la contraseña
+    user.password = new_password
+    user.reset_code = None
+    db.session.commit()
+
+    return jsonify({"Mensaje": "Password updated"}), 200
     
     

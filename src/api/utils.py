@@ -1,4 +1,6 @@
 from flask import jsonify, url_for
+from flask_mail import Message
+# from .app import mail
 
 class APIException(Exception):
     status_code = 400
@@ -39,3 +41,12 @@ def generate_sitemap(app):
         <p>Start working on your project by following the <a href="https://start.4geeksacademy.com/starters/full-stack" target="_blank">Quick Start</a></p>
         <p>Remember to specify a real endpoint path like: </p>
         <ul style="text-align: left;">"""+links_html+"</ul></div>"
+
+def send_reset_email(user_email, code):
+    msg = Message('Password Reset Request',
+                  recipients=[user_email])
+    msg.body = f'''To reset your password, use the following code:
+    {code}
+    If you did not make this request then simply ignore this email.
+    '''
+    mail.send(msg)
