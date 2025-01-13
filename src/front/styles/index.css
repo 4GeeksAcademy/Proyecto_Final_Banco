@@ -1,3 +1,130 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+h1,
+h2,
+h3,
+p,
+span {
+  transition: all 0.6s ease-in-out;
+}
+
+
+/*scroll principal*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.756);
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* ajusta el footer para que siempre se localize abajo (las clases se ubican en el loyout.js) */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+}
+
+
+.w-85 {
+  width: 85%;
+}
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fondo-modo-claro {
+  background-color: #ffffff;
+}
+
+.fondo-modo-oscuro {
+  background-color: rgb(52 58 63) !important;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.color-principal {
+  background-color: red;
+  color: white;
+  font-weight: 700;
+}
+
+.color-componente {
+  background-color: #95f238;
+  color: #0d0d0de8;
+  font-weight: 700;
+}
+
+.color-componente2 {
+  background-color: #aaf23d;
+  color: #0d0d0de8;
+  font-weight: 700;
+}
+
+
+
+.enlace-claro:hover {
+  /* iluminacion letra para el modo oscuro */
+  cursor: pointer;
+  text-shadow: 0 0 13px rgb(163, 163, 163);
+}
+
+.enlace-oscuro:hover {
+  /* iluminacion letra para el modo claro */
+  cursor: pointer;
+  text-shadow: 0 0 13px rgba(64, 64, 64, 0.542);
+}
+
+.borde-brillante {
+  /* borde con iluminacion */
+  box-shadow: 0 0 10px rgb(110, 110, 110);
+}
+
+
+.letra-brillante {
+  /* iluminacion para letras */
+  text-shadow: 0 0 13px rgb(255, 255, 255);
+}
+
+.hover:hover {
+  /* accion para que el cursor actue como link */
+  cursor: pointer;
+}
+
+/*Desenfocar contenido*/
+
+.desenfoque {
+  filter: blur(4px);
+  user-select: none;
+}

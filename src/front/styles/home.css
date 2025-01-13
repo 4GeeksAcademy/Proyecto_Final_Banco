@@ -1,7 +1,183 @@
-/*
-    home.css: This website contains selectors only used in home.css
+/* Animacion para suavizar la transicion del saldo del usuario y contenedor de notificaciones*/
+.elemento {
+    opacity: 0.1;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.elemento.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animacion para suavizar la transicion de la tabla de movimientos*/
+.elemento-tabla {
+    opacity: 0.1;
+    transform: translateX(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.elemento-tabla.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.elemento-segundario {
+    opacity: 0.1;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.elemento-segundario.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Animacion para suavizar la transicion de los componentes interactivos*/
+
+/* primera columna */
+.componente-izquierdo {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.componente-izquierdo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* segunda columna */
+.componente-izquierdov2 {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.componente-izquierdov2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* tercera columna */
+.componente-derechov2 {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.componente-derechov2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* cuarta columna */
+.componente-derecho {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.componente-derecho.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.contenedor-componente-interactivo {
+    height: 200px;
+}
+
+
+/*animacion contenedor notificaciones*/
+.elemento-noti {
+    opacity: 0.1;
+    transform: translateX(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.elemento-noti.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*scroll del contenedor de notificaciones*/
+
+.scroll {
+    overflow: auto;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 0;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.756);
+    cursor: grab;
+}
+
+.scroll::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+/*Fondos para la lista de componentes*/
+
+.bg-cuentas {
+    background-color: rgba(20, 20, 20, 1);
+}
+
+/*animacion para cada contenedor*/
+.animacion-contenedor {
+    transition: transform 0.5s ease, box-shadow 1s ease;
+}
+
+.animacion-contenedor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.animacion-contenedor span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.animacion-contenedor span::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2.5px;
+    background-color: rgb(110, 110, 110);
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.animacion-contenedor:hover span::after {
+    width: 80%;
+    /* Asegura que el pseudo-elemento crezca */
+}
+
+.animacion-contenedor:hover span {
+    justify-content: center;
+}
+
+.animacion-contenedor:hover span {
+    transform: scale(0.9);
+    /* Aumenta el tamaño del span */
+}
+
+.animacion-contenedor:hover .simbolo {
+    transform: translateY(10px);
+    transform: scale(1.2);
+}
